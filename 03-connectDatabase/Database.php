@@ -13,10 +13,20 @@ class Database
         ]);
     }
 
-    public function query($query)
+    //no prevention of SQL injection
+    // public function query($query)
+    // {
+    //     $statement = $this->connection->prepare($query);
+    //     $statement->execute();
+
+    //     return $statement;
+    // }
+
+    //prevention of SQL injection
+    public function query($query, $params = [])
     {
         $statement = $this->connection->prepare($query);
-        $statement->execute();
+        $statement->execute($params);
 
         return $statement;
     }
