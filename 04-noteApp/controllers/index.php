@@ -1,3 +1,5 @@
 <?php
-$page = 'Home';
-require('./views/contact.view.php');
+
+view('index.view.php', [
+    'page' => 'Home'
+]);

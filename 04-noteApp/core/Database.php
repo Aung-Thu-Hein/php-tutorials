@@ -3,6 +3,7 @@
 class Database
 {
     public $connection;
+    public $statement;
 
     public function __construct($config, $username, $password)
     {
@@ -25,9 +26,19 @@ class Database
     //prevention of SQL injection
     public function query($query, $params = [])
     {
-        $statement = $this->connection->prepare($query);
-        $statement->execute($params);
+        $this->statement = $this->connection->prepare($query);
+        $this->statement->execute($params);
 
-        return $statement;
+        return $this;
+    }
+
+    public function getAll()
+    {
+        return $this->statement->fetchAll();
+    }
+
+    public function get()
+    {
+        return $this->statement->fetch();
     }
 }

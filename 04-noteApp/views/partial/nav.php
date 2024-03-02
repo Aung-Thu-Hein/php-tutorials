@@ -8,10 +8,10 @@
                 <div class="hidden md:block">
                     <div class="ml-10 flex items-baseline space-x-4">
                         <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
-                        <a href="<?= '/04-noteApp/' ?>" class="<?= urlIs('/php-tutorials/04-noteApp/controllers/index.php') ? 'bg-gray-900 text-white' : 'text-gray-300 hover:bg-gray-700 hover:text-white' ?> rounded-md px-3 py-2 text-sm font-medium">Home</a>
-                        <a href="<?= '/04-noteApp/about' ?>" class="<?= urlIs('/php-tutorials/04-noteApp/controllers/about.php') ? 'bg-gray-900 text-white' : 'text-gray-300 hover:bg-gray-700 hover:text-white' ?> rounded-md px-3 py-2 text-sm font-medium" aria-current="page">About</a>
-                        <a href="<?= '/04-noteApp/notes' ?>" class="<?= urlIs('/php-tutorials/04-noteApp/controllers/notes.php') ? 'bg-gray-900 text-white' : 'text-gray-300 hover:bg-gray-700 hover:text-white' ?> rounded-md px-3 py-2 text-sm font-medium" aria-current="page">Notes</a>
-                        <a href="<?= '/04-noteApp/contact' ?>" class="<?= urlIs('/php-tutorials/04-noteApp/controllers/contact.php') ? 'bg-gray-900 text-white' : 'text-gray-300 hover:bg-gray-700 hover:text-white' ?> rounded-md px-3 py-2 text-sm font-medium">Contact</a>
+                        <a href="<?= '/' ?>" class="<?= urlIs('/php-tutorials/04-noteApp/controllers/index.php') ? 'bg-gray-900 text-white' : 'text-gray-300 hover:bg-gray-700 hover:text-white' ?> rounded-md px-3 py-2 text-sm font-medium">Home</a>
+                        <a href="<?= '/about' ?>" class="<?= urlIs('/php-tutorials/04-noteApp/controllers/about.php') ? 'bg-gray-900 text-white' : 'text-gray-300 hover:bg-gray-700 hover:text-white' ?> rounded-md px-3 py-2 text-sm font-medium" aria-current="page">About</a>
+                        <a href="<?= '/notes' ?>" class="<?= urlIs('/php-tutorials/04-noteApp/controllers/notes.php') ? 'bg-gray-900 text-white' : 'text-gray-300 hover:bg-gray-700 hover:text-white' ?> rounded-md px-3 py-2 text-sm font-medium" aria-current="page">Notes</a>
+                        <a href="<?= '/contact' ?>" class="<?= urlIs('/php-tutorials/04-noteApp/controllers/contact.php') ? 'bg-gray-900 text-white' : 'text-gray-300 hover:bg-gray-700 hover:text-white' ?> rounded-md px-3 py-2 text-sm font-medium">Contact</a>
                     </div>
                 </div>
             </div>
