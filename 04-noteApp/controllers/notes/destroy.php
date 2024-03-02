@@ -7,11 +7,11 @@ $db = new Database($config['database'], 'root', 'newpassword');
 
 $current_user_id = 1;
 
-$note = $db->query("select * from notes where id = :id", ['id' => $_GET['id']])->findOrFail();
+$note = $db->query("select * from notes where id = :id", ['id' => $_POST['id']])->findOrFail();
 
 authorize($note['user_id'] == $current_user_id);
 
-view('notes/show.view.php', [
-    'page' => 'Note',
-    'note' => $note
-]);
+$db->query("delete from notes where id = :id", ['id' => $_POST['id']]);
+
+header('location: /notes');
+exit();
