@@ -13,4 +13,3 @@ spl_autoload_register(function($class) {
 
 require basePath('bootstrap.php');
 require basePath('routes.php');
-
