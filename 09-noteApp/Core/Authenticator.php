@@ -26,6 +26,8 @@ class Authenticator
         $_SESSION['user'] = [
             'email' => $user['email']
         ];
+
+        session_regenerate_id();
     }
 
     public function logout()
